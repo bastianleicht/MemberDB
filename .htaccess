@@ -1,0 +1,42 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine on
+    RewriteBase /
+
+	#auth
+	RewriteRule ^login?$ index.php?page=auth_login [L]
+	RewriteRule ^register?$ index.php?page=auth_register [L]
+	RewriteRule ^logout?$ index.php?page=auth_logout [L]
+	RewriteRule ^activate/([A-Za-z0-9-]+)?$ index.php?page=auth_activate&key=$1 [NC,L]
+
+	#index
+	RewriteRule ^/?$ index.php?page=dashboard [L]
+    RewriteRule ^dashboard?$ index.php?page=dashboard [L]
+    RewriteRule ^profile?$ index.php?page=profile [L]
+    RewriteRule ^members?$ index.php?page=members [L]
+
+    #member
+    RewriteRule ^member/([A-Za-z0-9-]+)?$ index.php?page=member&id=$1 [NC,L]
+
+    #rechtliches
+    RewriteRule ^impressum?$ index.php?page=impressum [L]
+    RewriteRule ^datenschutz?$ index.php?page=datenschutz [L]
+    RewriteRule ^agb?$ index.php?page=agb [L]
+
+    #team
+    RewriteRule ^team/index?$ index.php?page=team_index [L]
+    RewriteRule ^team/teams?$ index.php?page=team_teams [L]
+    RewriteRule ^team/edit/([A-Za-z0-9-]+)?$ index.php?page=team_edit&id=$1 [NC,L]
+    RewriteRule ^team/users?$ index.php?page=team_users [L]
+    RewriteRule ^team/user/([A-Za-z0-9-]+)?$ index.php?page=team_user&id=$1 [NC,L]
+    RewriteRule ^team/members?$ index.php?page=team_members [L]
+    RewriteRule ^team/member/([A-Za-z0-9-]+)?$ index.php?page=team_member&id=$1 [NC,L]
+    RewriteRule ^team/login_back$ index.php?page=team_login_back [L]
+    RewriteRule ^team/settings$ index.php?page=team_settings [L]
+
+
+</IfModule>
+<Files 403.shtml>
+    order allow,deny
+    allow from all
+</Files>
