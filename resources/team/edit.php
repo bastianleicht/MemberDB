@@ -33,15 +33,15 @@ $team_data = $SQL->fetch(PDO::FETCH_ASSOC);
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <form method="post">
-                        <button type="submit" name="deleteTeam" class="btn btn-primary">Team Löschen</button>
-                    </form>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="<?= $helper->url(); ?>">Home</a></li>
+                    <ol class="breadcrumb float-sm-left">
+                        <li class="breadcrumb-item"><a href="<?= $helper->url(); ?>"><?= $helper->siteName(); ?></a></li>
                         <li class="breadcrumb-item active"><?= $currPageName; ?></li>
                     </ol>
+                </div>
+                <div class="col-sm-6">
+                    <form method="post">
+                        <button type="submit" name="deleteTeam" class="btn btn-primary float-sm-right">Team Löschen</button>
+                    </form>
                 </div>
             </div>
         </div>

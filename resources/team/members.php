@@ -39,15 +39,15 @@ if (isset($_POST["exportcsv"])) {
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <form method="post">
-                        <button type="submit" name="exportcsv" class="btn btn-primary">Export to CSV</button>
-                    </form>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="<?= $helper->url(); ?>">Home</a></li>
+                    <ol class="breadcrumb float-sm-left">
+                        <li class="breadcrumb-item"><a href="<?= $helper->url(); ?>"><?= $helper->siteName(); ?></a></li>
                         <li class="breadcrumb-item active"><?= $currPageName; ?></li>
                     </ol>
+                </div>
+                <div class="col-sm-6">
+                    <form method="post">
+                        <button type="submit" name="exportcsv" class="btn btn-primary float-sm-right">Export to CSV</button>
+                    </form>
                 </div>
             </div>
         </div>
