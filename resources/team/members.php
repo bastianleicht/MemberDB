@@ -7,6 +7,8 @@ include 'app/controller/PageController.php';
 if (isset($_POST["exportcsv"])) {
     echo sendInfo('Derzeit nicht verfügbar!');
 
+
+
     // $filename = "Member-Export.csv";
     // header('Content-Type: text/csv; charset=utf-8');
     // header('Content-Disposition: attachment; filename="data.csv"');
@@ -46,7 +48,7 @@ if (isset($_POST["exportcsv"])) {
                 </div>
                 <div class="col-sm-6">
                     <form method="post">
-                        <button type="submit" name="exportcsv" class="btn btn-primary float-sm-right">Export to CSV</button>
+                        <button type="submit" name="exportcsv" id="exportcsv" class="btn btn-primary float-sm-right">Export to CSV</button>
                     </form>
                 </div>
             </div>
