@@ -19,7 +19,8 @@ if (isset($_POST['deleteTeam'])) {
     $SQL = $db->prepare("UPDATE `member_teams` SET `state` = :state, `deleted_at` = :deleted_at WHERE `id` = :id");
     $SQL->execute(array(":state" => 'disabled', ":deleted_at" => $datetime, ":id" => $id));
 
-    echo sendSuccess('Member wurde erfolgreich gelöscht!');
+    echo sendSuccess('Team wurde erfolgreich gelöscht!');
+    header('refresh:3;url=' . $helper->url() . 'team/teams');
 }
 
 $SQL = $db->prepare("SELECT * FROM `member_teams` WHERE `id` = :id");

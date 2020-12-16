@@ -9,6 +9,7 @@ if(isset($_POST['updateUser'])){
     $SQL->execute(array($_POST['state'], $_POST['role'], $_POST['username'], $_POST['email'], $_POST['member_limit'], $id));
 
     echo sendSuccess('Der Benutzer wurde bearbeitet');
+    header('refresh:3;url=' . $helper->url() . 'team/users');
 }
 
 $SQL = $db->prepare("SELECT * FROM `users` WHERE `id` = :id");
