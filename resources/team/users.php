@@ -30,7 +30,7 @@ include 'app/controller/PageController.php';
                         <th scope="col">E-Mail</th>
                         <th scope="col">Status</th>
                         <th scope="col">Rang</th>
-                        <th scope="col">Kunde seit</th>
+                        <th scope="col">Erstellt am</th>
                         <th scope="col"></th>
                     </tr>
                     </thead>
