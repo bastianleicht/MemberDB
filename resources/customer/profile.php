@@ -65,9 +65,6 @@ if(isset($_POST['changePassword'])){
 
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Mein Profil</h3>
-                        </div>
                         <div class="card-body">
                             <label>Benutzername</label>
                             <input value="<?= $username; ?>" readonly style="color: white;" class="form-control">
@@ -78,7 +75,10 @@ if(isset($_POST['changePassword'])){
                             <label>Kundennummer</label>
                             <input value="KD-<?= $userid; ?>" readonly style="color: white;" class="form-control">
                             <br>
-                            <label>Member Limit</label>
+                            <label>Personal Member Limit</label>
+                            <input value="<?= $user_memberslots; ?>" readonly style="color: white;" class="form-control">
+                            <br>
+                            <label>Global Member Limit</label>
                             <input value="<?= $member_slots; ?>" readonly style="color: white;" class="form-control">
                         </div>
                     </div>
@@ -86,9 +86,6 @@ if(isset($_POST['changePassword'])){
 
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Mein Profil</h3>
-                        </div>
                         <div class="card-body">
                             <form method="post">
                                 <label>Aktuelles Passwort</label>
