@@ -1,6 +1,7 @@
 <?php
 
 $bot = new Bot();
+
 class Bot extends Controller
 {
 
@@ -42,25 +43,10 @@ class Bot extends Controller
         return $response[$data];
     }
 
-    public function delete($data, $node_id)
+    public function create($userid, $username, $rlname, $fnname, $alter, $trackerlink, $team, $socials, $eigenschaften, $zukunft, $cws, $bemerkungen)
     {
-        // Bot::stop($data, $data['id'], $node_id);
-
-        sleep(1);
-
-        $date = new DateTime(null, new DateTimeZone('Europe/Berlin'));
-        $datetime = $date->format('Y-m-d H:i:s');
-
-        $SQL = self::db()->prepare("UPDATE `bots` SET `state` = :state, `deleted_at` = :deleted_at WHERE `id` = :id");
-        $SQL->execute(array(":state" => 'deleted', ":deleted_at" => $datetime, ":id" => $data['id']));
-    }
-
-    public function create($session_token, $username, $rlname, $fnname, $alter, $trackerlink, $team, $socials, $eigenschaften, $zukunft, $cws)
-    {
-        $user_id = User::getDataBySession($session_token, 'id');
-
-        $SQL = self::db()->prepare("INSERT INTO `member` (`user_id`, `username` ,`rlname`,`fnname`,`member_alter`,`tracker`,`team_id`,`socials`, `eigenschaften`, `zukunft`, `cws`)  VALUES (?,?,?,?,?,?,?,?,?,?,?)");
-        $SQL->execute(array($user_id, $username, $rlname, $fnname, $alter, $trackerlink, $team, $socials, $eigenschaften, $zukunft, $cws));
+        $SQL = self::db()->prepare("INSERT INTO `member` (`user_id`, `username` ,`rlname`,`fnname`,`member_alter`,`tracker`,`team_id`,`socials`, `eigenschaften`, `zukunft`, `cws`, `bemerkungen`)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+        $SQL->execute(array($userid, $username, $rlname, $fnname, $alter, $trackerlink, $team, $socials, $eigenschaften, $zukunft, $cws, $bemerkungen));
 
     }
 
