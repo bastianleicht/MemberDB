@@ -38,7 +38,7 @@ if (isset($_POST['createMember'])) {
     }
 
     if (empty($error)) {
-        $bot->create($_COOKIE['session_token'], $helper->protect($_POST['username']), $_POST['rlname'], $_POST['fnname'], $_POST['alter'], $_POST['trackerlink'], $_POST['team'], $_POST['socials'], $_POST['eigenschaften'], $_POST['zukunft'], $_POST['cws']);
+        $bot->create($userid, $helper->protect($_POST['username']), $_POST['rlname'], $_POST['fnname'], $_POST['alter'], $_POST['trackerlink'], $_POST['team'], $_POST['socials'], $_POST['eigenschaften'], $_POST['zukunft'], $_POST['cws'], $_POST['bemerkungen']);
         echo sendSuccess('Member wurde erstellt');
     } else {
         echo sendError($error);
@@ -108,6 +108,10 @@ if (isset($_POST['createMember'])) {
                         <option value="ja">Ja</option>
                         <option value="nein">Nein</option>
                     </select>
+
+                    <br>
+                    <label>Benerkungen:</label>
+                    <textarea class="form-control" rows="5" name="bemerkungen" placeholder="-"></textarea>
 
                 </div>
                 <div class="modal-footer">

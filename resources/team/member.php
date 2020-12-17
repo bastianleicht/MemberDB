@@ -5,8 +5,8 @@ include 'app/controller/PageController.php';
 $id = $helper->protect($_GET['id']);
 
 if (isset($_POST['updateMember'])) {
-    $SQL = $db->prepare("UPDATE `member` SET `username`=? ,`rlname`=?,`fnname`=?,`member_alter`=?,`tracker`=?,`team_id`=?,`socials`=?, `eigenschaften`=?, `zukunft`=?, `cws`=? WHERE `id` = ?");
-    $SQL->execute(array($_POST['username'], $_POST['rlname'], $_POST['fnname'], $_POST['alter'], $_POST['trackerlink'], $_POST['team'], $_POST['socials'], $_POST['eigenschaften'], $_POST['zukunft'], $_POST['cws'], $id));
+    $SQL = $db->prepare("UPDATE `member` SET `username`=? ,`rlname`=?,`fnname`=?,`member_alter`=?,`tracker`=?,`team_id`=?,`socials`=?, `eigenschaften`=?, `zukunft`=?, `cws`=?, `bemerkungen`=? WHERE `id` = ?");
+    $SQL->execute(array($_POST['username'], $_POST['rlname'], $_POST['fnname'], $_POST['alter'], $_POST['trackerlink'], $_POST['team'], $_POST['socials'], $_POST['eigenschaften'], $_POST['zukunft'], $_POST['cws'], $_POST['bemerkungen'], $id));
 
     echo sendSuccess('Member wurde bearbeitet');
 }
@@ -118,6 +118,10 @@ $member_data = $SQL->fetch(PDO::FETCH_ASSOC);
                                                 echo 'selected';
                                             } ?> value="2">Nein</option>
                                 </select>
+                                <br>
+
+                                <label>Benerkungen:</label>
+                                <textarea class="form-control" rows="5" name="bemerkungen"><?= $member_data['bemerkungen']?></textarea>
                                 <br>
 
                                 <button type="submit" name="updateMember" class="btn btn-primary btn btn-block">Speichern</button>
