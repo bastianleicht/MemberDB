@@ -1,5 +1,6 @@
 <?php
-$DEBUG = true;
+$dev = true;
+$DEBUG = false;
 
 $db_host = 'localhost';
 $db_name = 'memberdb';

@@ -17,21 +17,41 @@ if($user->sessionExists($_COOKIE['session_token'])){
         $SQL->execute(array(":user_addr" => $user->getIP(), ":id" => $userid));
         $user_addr = $user->getIP();
     }
-    if($user->getIP() != $user_addr){
-        if(isset($_COOKIE['old_session_token'])){
-            if($user->isInTeam($_COOKIE['old_session_token'])){
+    include_once 'app/controller/config.php';
+    if($dev = true){
+        if('127.0.0.1' != $user_addr){
+            if(isset($_COOKIE['old_session_token'])){
+                if($user->isInTeam($_COOKIE['old_session_token'])){
 
+                } else {
+                    $_SESSION['info_msg'] = 'Session Expired';
+                    setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
+                    die();
+                }
             } else {
-                $_SESSION['info_msg'] = 'Something went wrong';
+                $_SESSION['info_msg'] = 'Session Expired';
                 setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
                 die();
             }
-        } else {
-            $_SESSION['info_msg'] = 'Something went wrong';
-            setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
-            die();
+        }
+    } else {
+        if($user->getIP() != $user_addr){
+            if(isset($_COOKIE['old_session_token'])){
+                if($user->isInTeam($_COOKIE['old_session_token'])){
+
+                } else {
+                    $_SESSION['info_msg'] = 'Session Expired';
+                    setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
+                    die();
+                }
+            } else {
+                $_SESSION['info_msg'] = 'Session Expired';
+                setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
+                die();
+            }
         }
     }
+
 }
 
 if (strpos($currPage,'back_') !== false || strpos($currPage,'_team') !== false) {
