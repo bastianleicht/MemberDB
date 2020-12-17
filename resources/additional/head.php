@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="<?= $helper->cdnUrl() ?>images/favicon.png" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1063e48ab5.js" crossorigin="anonymous"></script>
 </head>
 
 <?php
