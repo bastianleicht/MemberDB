@@ -1,5 +1,5 @@
 <?php
-$currPage = 'back_Memberverwaltung_team_admin';
+$currPage = 'back_Team Memberverwaltung_team_admin';
 include 'app/controller/PageController.php';
 
 // $productResult = $SQL = $db->prepare("SELECT * FROM `member`");
