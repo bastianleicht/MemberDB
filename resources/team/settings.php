@@ -60,10 +60,10 @@ if(isset($_POST['savesiteNameSmall'])){
     </div>
 
     <div class="content">
-        <div class="container-fluid">
-            <div class="row">
+        <div class="container">
+            <div class="row justify-content-center">
 
-                <div class="col-md-12">
+                <div class="col-md-4">
                     <form method="post">
                         <div class="card">
                             <div class="card-body">
@@ -76,8 +76,7 @@ if(isset($_POST['savesiteNameSmall'])){
                     </form>
                 </div>
 
-                <div class="col-md-12">
-                    <br>
+                <div class="col-md-4">
                     <form method="post">
                         <div class="card">
                             <div class="card-body">
@@ -90,8 +89,7 @@ if(isset($_POST['savesiteNameSmall'])){
                     </form>
                 </div>
 
-                <div class="col-md-12">
-                    <br>
+                <div class="col-md-4">
                     <form method="post">
                         <div class="card">
                             <div class="card-body">
@@ -109,7 +107,7 @@ if(isset($_POST['savesiteNameSmall'])){
                     <form method="post">
                         <div class="card">
                             <div class="card-body">
-                                <label>Impressum</label>
+                                <label>Impressum:</label>
                                 <textarea name="impressum" rows="20" class="form-control"><?= $helper->getSetting('impressum'); ?></textarea>
                                 <br>
                                 <button type="submit" class="btn btn-primary btn-block" name="saveImpressum">Speichern</button>
@@ -123,7 +121,7 @@ if(isset($_POST['savesiteNameSmall'])){
                     <form method="post">
                         <div class="card">
                             <div class="card-body">
-                                <label>AGB</label>
+                                <label>AGB:</label>
                                 <textarea name="agb" rows="20" class="form-control"><?= $helper->getSetting('agb'); ?></textarea>
                                 <br>
                                 <button type="submit" class="btn btn-primary btn-block" name="saveAGB">Speichern</button>
@@ -137,7 +135,7 @@ if(isset($_POST['savesiteNameSmall'])){
                     <form method="post">
                         <div class="card">
                             <div class="card-body">
-                                <label>Datenschutz</label>
+                                <label>Datenschutz:</label>
                                 <textarea name="datenschutz" rows="20" class="form-control"><?= $helper->getSetting('datenschutz'); ?></textarea>
                                 <br>
                                 <button type="submit" class="btn btn-primary btn-block" name="saveDatenschutz">Speichern</button>
