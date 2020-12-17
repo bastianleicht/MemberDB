@@ -8,8 +8,7 @@
 
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item nav-profile dropdown">
-                    <span class="nav-profile-name"><?= $user->getDataById($userid, 'username')?></span>
-                    <i class="far fa-user-circle"></i>
+                    <span class="nav-profile-name text-center" style="width: 70px;"><?= $user->getDataById($userid, 'username')?></span>
                     <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
                         <img src="https://via.placeholder.com/30x30" alt="profile" />
                     </a>
@@ -37,13 +36,13 @@
         <ul class="nav page-navigation">
             <li class="nav-item">
                 <a class="nav-link" href="<?= $helper->url(); ?>">
-                    <i class="mdi mdi-shield-half-full menu-icon"></i>
+                    <i class="mdi mdi-application menu-icon"></i>
                     <span class="menu-title">Dashboard</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?= $helper->url(); ?>members">
-                    <i class="mdi mdi-puzzle menu-icon"></i>
+                    <i class=" mdi mdi-account-outline menu-icon"></i>
                     <span class="menu-title">All Members</span>
                 </a>
             </li>
@@ -51,7 +50,7 @@
             <?php if ($user->isAdmin($_COOKIE['session_token'])) { ?>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
-                        <i class="mdi mdi-image-filter menu-icon"></i>
+                        <i class="mdi mdi-settings menu-icon"></i>
                         <span class="menu-title">Administration</span>
                         <i class="menu-arrow"></i>
                     </a>
