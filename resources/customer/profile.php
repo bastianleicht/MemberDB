@@ -103,6 +103,34 @@ if(isset($_POST['changePassword'])){
                     </div>
                 </div>
 
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="text-muted">Login Logs</p>
+                            <table id="table1" class="table dt-responsive nowrap">
+                                <thead>
+                                <tr>
+                                    <th>IP Adresse</th>
+                                    <th>Datum</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                $SQL = $db->prepare("SELECT * FROM `login_logs` WHERE `user_id` = :user_id");
+                                $SQL->execute(array(":user_id" => $userid));
+                                if ($SQL->rowCount() != 0) {
+                                    while ($row = $SQL -> fetch(PDO::FETCH_ASSOC)){?>
+                                        <tr>
+                                            <td><?= $row['ip_addr']; ?></td>
+                                            <td><?= $helper->formatDate($row['created_at']); ?></td>
+                                        </tr>
+                                    <?php } } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
