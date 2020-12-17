@@ -15,6 +15,7 @@ include_once './vendor/autoload.php';
  */
 include 'app/controller/config.php';
 include_once 'app/functions/autoload.php';
+include_once 'app/Kernel.php';
 
 include_once 'app/notifications/sendMail.php';
 
@@ -44,6 +45,8 @@ if(isset($_GET['page'])) {
         case "dashboard": include($customer."dashboard.php");  break;
         case "profile": include($customer."profile.php");  break;
         case "members": include($customer."members.php");  break;
+
+        case "DEBUG": include("DEBUG/index.php");  break;
 
         //member
         case "member": include($customer."member.php");  break;

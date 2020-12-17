@@ -34,6 +34,8 @@
     RewriteRule ^team/login_back$ index.php?page=team_login_back [L]
     RewriteRule ^team/settings$ index.php?page=team_settings [L]
 
+    #debug
+    RewriteRule ^DEBUG?$ index.php?page=DEBUG [L]
 
 </IfModule>
 <Files 403.shtml>
