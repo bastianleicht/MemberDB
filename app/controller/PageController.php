@@ -45,7 +45,7 @@ if($user->sessionExists($_COOKIE['session_token'])){
                     die();
                 }
             } else {
-                $_SESSION['info_msg'] = 'Session Expired';
+                $_SESSION['info_msg'] = 'Session Expired weirdly';
                 setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
                 die();
             }
