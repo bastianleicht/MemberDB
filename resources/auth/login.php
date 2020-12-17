@@ -17,7 +17,7 @@ include 'app/manager/customer/auth/login.php';
                             <h6 class="font-weight-light">Login!</h6>
                             <form class="pt-3" method="post">
                                 <div class="form-group">
-                                    <input style="color:white" type="email" value="<?= $_POST['email']; ?>" name="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="E-Mail">
+                                    <input style="color:white" type="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="E-Mail">
                                 </div>
                                 <div class="form-group">
                                     <input style="color:white" type="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Dein Passwort">

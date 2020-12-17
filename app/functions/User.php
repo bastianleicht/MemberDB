@@ -38,9 +38,9 @@ class User extends Controller
         }
     }
 
-    public function generateSessionToken($data)
+    public function generateSessionToken($data, $session_token)
     {
-        $session_token = helper::generateRandomString(30);
+        #$session_token = helper::generateRandomString(30);
 
         $SQL = self::db()->prepare("UPDATE `users` SET `session_token` = :session_token WHERE `email` = :email OR `username` = :username");
         $SQL->execute(array(":session_token" => $session_token, ":email" => $data, ":username" => $data));
@@ -92,6 +92,15 @@ class User extends Controller
     {
         $SQL = self::db()->prepare("SELECT * FROM `users` WHERE `id` = :id");
         $SQL->execute(array(":id" => $id));
+        $response = $SQL->fetch(PDO::FETCH_ASSOC);
+
+        return $response[$data];
+    }
+
+    public function getDataByEmail($email, $data)
+    {
+        $SQL = self::db()->prepare("SELECT * FROM `users` WHERE `email` = :email");
+        $SQL->execute(array(":email" => $email));
         $response = $SQL->fetch(PDO::FETCH_ASSOC);
 
         return $response[$data];
