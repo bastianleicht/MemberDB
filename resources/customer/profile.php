@@ -77,9 +77,6 @@ if(isset($_POST['changePassword'])){
                             <br>
                             <label>Personal Member Limit</label>
                             <input value="<?= $user_memberslots; ?>" readonly style="color: white;" class="form-control">
-                            <br>
-                            <label>Global Member Limit</label>
-                            <input value="<?= $member_slots; ?>" readonly style="color: white;" class="form-control">
                         </div>
                     </div>
                 </div>
@@ -116,7 +113,7 @@ if(isset($_POST['changePassword'])){
                                 </thead>
                                 <tbody>
                                 <?php
-                                $SQL = $db->prepare("SELECT * FROM `login_logs` WHERE `user_id` = :user_id");
+                                $SQL = $db->prepare("SELECT * FROM `login_logs` WHERE `user_id` = :user_id ORDER BY `id` DESC LIMIT 10");
                                 $SQL->execute(array(":user_id" => $userid));
                                 if ($SQL->rowCount() != 0) {
                                     while ($row = $SQL -> fetch(PDO::FETCH_ASSOC)){?>
