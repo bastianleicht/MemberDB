@@ -43,10 +43,10 @@ include 'app/controller/PageController.php';
         #membersearch {
             background-position: 10px 12px;
             background-repeat: no-repeat;
+            background-color: rgba(46, 50, 74, 0.7);
             width: 100%;
-            font-size: 16px;
-            padding: 12px 20px 12px 40px;
-            border: 1px solid #ddd;
+            font-size: 15px;
+            border: 1px solid rgba(46, 50, 74, 0.8);
             margin-bottom: 12px;
         }
     </style>
@@ -57,10 +57,8 @@ include 'app/controller/PageController.php';
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Member</h3>
-                        </div>
                         <div class="card-body">
+                            <input type="text" id="membersearch" onkeyup="searchMembers()" placeholder="Search for Usernames..." class="form-control">
                             <table id="dataTableDE" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -73,7 +71,6 @@ include 'app/controller/PageController.php';
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <input type="text" id="membersearch" onkeyup="searchMembers()" placeholder="Search for Usernames.." class="form-control">
                                     <?php
                                     $SQL = $db->prepare("SELECT * FROM `member` WHERE `deleted_At` IS NULL ORDER BY `id` DESC");
                                     $SQL->execute();
