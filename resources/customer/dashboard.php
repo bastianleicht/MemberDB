@@ -33,7 +33,7 @@ if (isset($_POST['createMember'])) {
         $error = 'Das Member Limit wurde erreicht';
     }
 
-    if ($user_memberslots <= $user->serviceCount()) {
+    if ($user_memberslots <= $user->serviceCount($userid)) {
         $error = 'Du hast dein Member Limit erreicht';
     }
 
