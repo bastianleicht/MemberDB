@@ -8,6 +8,8 @@
 
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item nav-profile dropdown">
+                    <span class="nav-profile-name"><?= $user->getDataById($userid, 'username')?></span>
+                    <i class="far fa-user-circle"></i>
                     <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
                         <img src="https://via.placeholder.com/30x30" alt="profile" />
                     </a>
@@ -51,7 +53,8 @@
                     <a href="#" class="nav-link">
                         <i class="mdi mdi-image-filter menu-icon"></i>
                         <span class="menu-title">Administration</span>
-                        <i class="menu-arrow"></i></a>
+                        <i class="menu-arrow"></i>
+                    </a>
                     <div class="submenu">
                         <ul class="submenu-item">
                             <li class="nav-item"><a class="nav-link" href="<?= $helper->url(); ?>team/teams">Teamverwaltung</a></li>

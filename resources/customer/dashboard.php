@@ -62,27 +62,22 @@ if (isset($_POST['createMember'])) {
                     <input name="username" placeholder="Benutzername" class="form-control">
 
                     <br>
-
                     <label>Reallife Name:</label>
                     <input name="rlname" placeholder="Max Mustermann" class="form-control">
 
                     <br>
-
                     <label>Fortnite Name:</label>
                     <input name="fnname" placeholder="Fortnite Name" class="form-control">
 
                     <br>
-
                     <label>Alter:</label>
                     <input name="alter" placeholder="Das Alter" class="form-control">
 
                     <br>
-
                     <label>Tracker Link:</label>
                     <input name="trackerlink" placeholder="https://fortnitetracker.com/profile/all/" class="form-control">
 
                     <br>
-
                     <label>Team:</label>
                     <select class="form-control" name="team" required="required">
                         <?php
@@ -96,22 +91,18 @@ if (isset($_POST['createMember'])) {
                     </select>
 
                     <br>
-
                     <label>Socials:</label>
                     <input name="socials" placeholder="Twitter, Youtube, Twitch" class="form-control">
 
                     <br>
-
                     <label>Stärken & Schwächen:</label>
                     <input name="eigenschaften" placeholder="Aim, Building" class="form-control">
 
                     <br>
-
                     <label>Zukunftspläne:</label>
                     <input name="zukunft" placeholder="-" class="form-control">
 
                     <br>
-
                     <label>Teilnahme an ClanWars?</label>
                     <select class="form-control" name="cws" required="required">
                         <option value="ja">Ja</option>
@@ -142,19 +133,6 @@ if (isset($_POST['createMember'])) {
         </div>
     </div>
 
-    <!-- <div class="row">
-        <div class="col-md-12 grid-margin">
-            <div class="d-flex justify-content-between flex-wrap">
-                <div class="d-flex align-items-center dashboard-header flex-wrap mb-3 mb-sm-0">
-                    <div class="d-flex align-items-baseline dashboard-breadcrumb">
-                        <p class="mb-0 mr-1 hover-cursor"><a href="<?= $helper->url()?>"><?= $helper->siteName(); ?></a></p>
-                        <i class="mdi mdi-chevron-right mr-1"></i>
-                        <p class="mb-0 mr-1 hover-cursor"><a href="<?= $helper->url()?>"><?= $currPageName; ?></a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="row justify-content-center">
         <div class="col-12 col-sm-6 col-md-3 grid-margin stretch-card">
             <div class="card icon-card-success">
@@ -210,14 +188,12 @@ if (isset($_POST['createMember'])) {
     <br>
 
     <div class="row">
-
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     Meine erstellten Member
                 </div>
                 <div class="card-body">
-
                     <table id="dataTableDE" class="table table-bordered table-striped">
                         <thead>
                             <tr>
@@ -247,7 +223,7 @@ if (isset($_POST['createMember'])) {
                                         <td><?= $helper->protect($row['username']); ?></td>
                                         <td><?= $state ?></td>
                                         <td><?= $helper->formatDate($row['created_at']); ?></td>
-                                        <td> <a href="<?= $helper->url(); ?>member/<?= $row['id']; ?>"><button class="btn btn-primary btn-sm">Verwalten</button></a> </td>
+                                        <td><a href="<?= $helper->url(); ?>member/<?= $row['id']; ?>"><button class="btn btn-primary btn-sm">Verwalten</button></a></td>
                                     </tr>
                             <?php }
                             } ?>

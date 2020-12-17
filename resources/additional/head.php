@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="utf-8">
@@ -27,5 +27,4 @@ if(strpos($currPage,'auth_') !== false) {
 
 <body>
 <div class="container-scroller">
-    <!-- partial:partials/_horizontal-navbar.html -->
     <div class="horizontal-menu">

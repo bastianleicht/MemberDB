@@ -1,14 +1,12 @@
-<footer class="footer">
-    <div class="w-100 clearfix">
-        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="https://encrosystems.de" target="_blank">encrosystems.de</a>. All rights reserved. Made with <i class="mdi mdi-heart-outline text-danger"></i> by <a href="https://routerabfrage.net" target="_blank">routerabfrage</a></span>
-        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><a href="<?= $helper->url()?>impressum">Impressum</a> | <a href="<?= $helper->url()?>datenschutz">Datenschutz</a> | <a href="<?= $helper->url()?>agb">AGB</a></span>
+            <footer class="footer">
+                <div class="w-100 clearfix">
+                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2020 <a href="https://encrosystems.de" target="_blank">encrosystems.de</a>. All rights reserved. Made with <i class="mdi mdi-heart-outline text-danger"></i> by <a href="https://routerabfrage.net" target="_blank">routerabfrage</a></span>
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><a href="<?= $helper->url()?>impressum">Impressum</a> | <a href="<?= $helper->url()?>datenschutz">Datenschutz</a> | <a href="<?= $helper->url()?>agb">AGB</a></span>
+                </div>
+            </footer>
+
+        </div>
     </div>
-</footer>
-
-</div>
-
-</div>
-
 </div>
 
 <!-- base:js -->
