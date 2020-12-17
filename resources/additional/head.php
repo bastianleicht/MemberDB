@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $currPageName; ?> | <?= $helper->siteName(); ?></title>
     <link rel="stylesheet" href="<?= $helper->cdnUrl() ?>vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="<?= $helper->cdnUrl() ?>vendors/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?= $helper->cdnUrl() ?>vendors/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="<?= $helper->cdnUrl() ?>vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="<?= $helper->cdnUrl() ?>vendors/flag-icon-css/css/flag-icon.min.css"/>
