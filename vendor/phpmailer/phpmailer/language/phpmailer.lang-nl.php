@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Dutch PHPMailer language file: refer to PHPMailer.php for definitive list.
  * @package PHPMailer
