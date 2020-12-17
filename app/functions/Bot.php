@@ -34,10 +34,10 @@ class Bot extends Controller
         return $count;
     }
 
-    public function getData($bot_id, $data)
+    public function getData($member_id, $data)
     {
         $SQL = self::db()->prepare("SELECT * FROM `member` WHERE `id` = :id");
-        $SQL->execute(array(":id" => $bot_id));
+        $SQL->execute(array(":id" => $member_id));
         $response = $SQL->fetch(PDO::FETCH_ASSOC);
 
         return $response[$data];
