@@ -12,6 +12,21 @@ class Earnings extends Controller
 
     }
 
+    public function getEarnings($userid)
+    {
+        $amount = 0;
+
+        $SQL = self::db()->prepare("SELECT * FROM `earnings` WHERE `state` = 'success' AND `member_id` = :memberid");
+        $SQL->execute(array(":memberid" => $userid));
+        if ($SQL->rowCount() != 0) {
+            while ($row = $SQL->fetch(PDO::FETCH_ASSOC)) {
+                $amount = $amount + $row['amount'];
+            }
+        }
+
+        return number_format($amount,2);
+    }
+
 }
 
 ?>

@@ -124,6 +124,10 @@ $member_data = $SQL->fetch(PDO::FETCH_ASSOC);
                                 <textarea class="form-control" rows="5" name="bemerkungen"><?= $member_data['bemerkungen']?></textarea>
                                 <br>
 
+                                <label>Earnings:</label>
+                                <input readonly class="form-control" name="zukunft" value="<?= $earnings->getEarnings($member_data['id']); ?>€">
+                                <br>
+
                                 <button type="submit" name="updateMember" class="btn btn-primary btn btn-block">Speichern</button>
 
                             </form>
