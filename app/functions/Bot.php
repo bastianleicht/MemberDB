@@ -43,6 +43,15 @@ class Bot extends Controller
         return $response[$data];
     }
 
+    public function getIDbyUName($username)
+    {
+        $SQL = self::db()->prepare("SELECT * FROM `member` WHERE `username` = :username");
+        $SQL->execute(array(":username" => $username));
+        $response = $SQL->fetch(PDO::FETCH_ASSOC);
+
+        return $response['id'];
+    }
+
     public function create($userid, $username, $rlname, $fnname, $alter, $trackerlink, $team, $socials, $eigenschaften, $zukunft, $cws, $bemerkungen)
     {
         $SQL = self::db()->prepare("INSERT INTO `member` (`user_id`, `username` ,`rlname`,`fnname`,`member_alter`,`tracker`,`team_id`,`socials`, `eigenschaften`, `zukunft`, `cws`, `bemerkungen`)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
