@@ -64,6 +64,7 @@ if(isset($_GET['page'])) {
         case "team_members": include($team."members.php");  break;
         case "team_member": include($team."member.php");  break;
         case "team_login_back": include($team."login_back.php");  break;
+        case "team_earnings": include($team."earnings.php");  break;
         case "team_settings": include($team."settings.php");  break;
 
     }

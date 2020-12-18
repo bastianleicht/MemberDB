@@ -59,6 +59,7 @@
                             <li class="nav-item"><a class="nav-link" href="<?= $helper->url(); ?>team/teams">Teamverwaltung</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?= $helper->url(); ?>team/users">Benutzerverwaltung</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?= $helper->url(); ?>team/members">Memberverwaltung</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?= $helper->url(); ?>team/earnings">Earnings</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?= $helper->url(); ?>team/settings">Settings</a></li>
                         </ul>
                     </div>

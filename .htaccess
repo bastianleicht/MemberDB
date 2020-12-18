@@ -32,6 +32,7 @@
     RewriteRule ^team/members?$ index.php?page=team_members [L]
     RewriteRule ^team/member/([A-Za-z0-9-]+)?$ index.php?page=team_member&id=$1 [NC,L]
     RewriteRule ^team/login_back$ index.php?page=team_login_back [L]
+    RewriteRule ^team/earnings$ index.php?page=team_earnings [L]
     RewriteRule ^team/settings$ index.php?page=team_settings [L]
 
     #debug
