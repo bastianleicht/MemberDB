@@ -9,6 +9,14 @@ if (isset($_POST['createMember'])) {
         $error = 'Bitte füge einen Username hinzu!';
     }
 
+    if(preg_match("/^[a-zA-Z0-9]+$/", $_POST['username']) == 0){
+        $error = 'Benutezrname enthält unerlaubte Zeichen';
+    }
+
+    if($member->exists($_POST['username'])){
+        $error = 'Ein Member mit diesem Benutzernamen existiert bereits';
+    }
+
     if (empty($_POST['rlname'])) {
         $error = 'Bitte füge einen Reallife Namen hinzu!';
     }
@@ -38,7 +46,7 @@ if (isset($_POST['createMember'])) {
     }
 
     if (empty($error)) {
-        $bot->create($userid, $helper->protect($_POST['username']), $_POST['rlname'], $_POST['fnname'], $_POST['alter'], $_POST['trackerlink'], $_POST['team'], $_POST['socials'], $_POST['eigenschaften'], $_POST['zukunft'], $_POST['cws'], $_POST['bemerkungen']);
+        $member->create($userid, $helper->protect($_POST['username']), $_POST['rlname'], $_POST['fnname'], $_POST['alter'], $_POST['trackerlink'], $_POST['team'], $_POST['socials'], $_POST['eigenschaften'], $_POST['zukunft'], $_POST['cws'], $_POST['bemerkungen']);
         echo sendSuccess('Member wurde erstellt');
     } else {
         echo sendError($error);

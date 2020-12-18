@@ -101,7 +101,7 @@ if(isset($_POST['addEarnings'])){
 
     if (empty($error)) {
 
-        $earnings->create($bot->getIDbyUName($_POST['member']), $_POST['gateway'], $_POST['state'], $_POST['amount'], $_POST['description']);
+        $earnings->create($$member->getIDbyUName($_POST['member']), $_POST['gateway'], $_POST['state'], $_POST['amount'], $_POST['description']);
 
         echo sendSuccess('Earning wurde erstellt');
     } else {
@@ -263,7 +263,7 @@ if(isset($_POST['addEarnings'])){
                                     while ($row = $SQL -> fetch(PDO::FETCH_ASSOC)){?>
                                         <tr>
                                             <td><?= $row['id']; ?></td>
-                                            <td><?= $bot->getData($row['member_id'], 'username'); ?></td>
+                                            <td><?= $member->getData($row['member_id'], 'username'); ?></td>
                                             <td><?= $row['gateway']; ?></td>
                                             <td><?= $row['state']?></td>
                                             <td><?= $row['amount']; ?>€</td>

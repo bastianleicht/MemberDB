@@ -1,8 +1,8 @@
 <?php
 
-$bot = new Bot();
+$member = new Member();
 
-class Bot extends Controller
+class Member extends Controller
 {
 
     public function getSelfCount($session_token)
@@ -57,6 +57,17 @@ class Bot extends Controller
         $SQL = self::db()->prepare("INSERT INTO `member` (`user_id`, `username` ,`rlname`,`fnname`,`member_alter`,`tracker`,`team_id`,`socials`, `eigenschaften`, `zukunft`, `cws`, `bemerkungen`)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
         $SQL->execute(array($userid, $username, $rlname, $fnname, $alter, $trackerlink, $team, $socials, $eigenschaften, $zukunft, $cws, $bemerkungen));
 
+    }
+
+    public function exists($username)
+    {
+        $SQL = self::db()->prepare("SELECT * FROM `member` WHERE `username` = :username");
+        $SQL->execute(array(":username" => $username));
+        if($SQL->rowCount() == 1){
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
