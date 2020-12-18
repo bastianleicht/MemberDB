@@ -4,36 +4,6 @@ $member = new Member();
 
 class Member extends Controller
 {
-
-    public function getSelfCount($session_token)
-    {
-        $user_id = User::getDataBySession($session_token,'id');
-
-        $SQL = self::db()->prepare("SELECT * FROM `member` WHERE `user_id` = :user_id AND `deleted_at` IS NULL");
-        $SQL->execute(array(":user_id" => $user_id));
-        $count = $SQL->rowCount();
-
-        return $count;
-    }
-
-    public function getCreated()
-    {
-        $SQL = self::db()->prepare("SELECT * FROM `member`");
-        $SQL->execute();
-        $count = $SQL->rowCount();
-
-        return $count;
-    }
-
-    public function getCount()
-    {
-        $SQL = self::db()->prepare("SELECT * FROM `member` WHERE `deleted_at` IS NULL");
-        $SQL->execute();
-        $count = $SQL->rowCount();
-
-        return $count;
-    }
-
     public function getData($member_id, $data)
     {
         $SQL = self::db()->prepare("SELECT * FROM `member` WHERE `id` = :id");
@@ -68,6 +38,17 @@ class Member extends Controller
         } else {
             return false;
         }
+    }
+
+    public function allMemberCount()
+    {
+        $count = 0;
+
+        $SQL = self::db()->prepare('SELECT * FROM `member` WHERE `state` = "active" AND `deleted_at` IS NULL');
+        $SQL->execute();
+        $count = $count + $SQL->rowCount();
+
+        return $count;
     }
 
 }

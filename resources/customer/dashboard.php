@@ -186,7 +186,7 @@ if (isset($_POST['createMember'])) {
                         <p class="font-weight-medium mb-0">Alle Member</p>
                     </div>
                     <div class="d-flex align-items-center mt-3 flex-wrap">
-                        <h3 class="font-weight-medium mb-0 mr-2"><?= $user->allMemberCount(); ?> / <?= $member_slots; ?></h3>
+                        <h3 class="font-weight-medium mb-0 mr-2"><?= $member->allMemberCount(); ?> / <?= $member_slots; ?></h3>
                     </div>
                 </div>
             </div>

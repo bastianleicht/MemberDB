@@ -112,8 +112,6 @@ class User extends Controller
 
         if($role == 'admin'){
             return true;
-        } elseif($role == 'supporter'){
-            return true;
         } else {
             return false;
         }
@@ -147,18 +145,6 @@ class User extends Controller
 
         $SQL = self::db()->prepare('SELECT * FROM `member` WHERE `user_id` = :user_id AND `deleted_at` IS NULL');
         $SQL->execute(array(":user_id" => $user_id));
-        $count = $count + $SQL->rowCount();
-
-        return $count;
-    }
-
-    public function allMemberCount()
-    {
-        $state = "active";
-        $count = 0;
-
-        $SQL = self::db()->prepare('SELECT * FROM `member` WHERE `state` = :state AND `deleted_at` IS NULL');
-        $SQL->execute(array(":state" => $state));
         $count = $count + $SQL->rowCount();
 
         return $count;
