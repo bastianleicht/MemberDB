@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "329a8084cf7a48d49cc037b5e2cf3a76",
+    "content-hash": "b41da4b5adf454689ea4336abe1ffad7",
     "packages": [
         {
             "name": "filp/whoops",
@@ -70,65 +70,6 @@
                 "source": "https://github.com/filp/whoops/tree/2.9.1"
             },
             "time": "2020-11-01T12:00:00+00:00"
-        },
-        {
-            "name": "fortnite-api/php-wrapper",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Fortnite-API/php-wrapper.git",
-                "reference": "ba932dbca418b78cbbb04e6ef583d7ee94515dd5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Fortnite-API/php-wrapper/zipball/ba932dbca418b78cbbb04e6ef583d7ee94515dd5",
-                "reference": "ba932dbca418b78cbbb04e6ef583d7ee94515dd5",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^6.4",
-                "php": ">=7.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FortniteApi\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "michel-pi",
-                    "email": "mail@michel-pi.de",
-                    "homepage": "https://github.com/Fortnite-API/php-wrapper",
-                    "role": "maintainer"
-                },
-                {
-                    "name": "NotOfficer",
-                    "email": "contact@fortnite-api.com",
-                    "homepage": "https://github.com/Fortnite-API/php-wrapper",
-                    "role": "owner"
-                }
-            ],
-            "description": "PHP wrapper for https://fortnite-api.com",
-            "keywords": [
-                "Fortnite",
-                "api",
-                "client",
-                "fortnite-api",
-                "fortnite-api.com",
-                "framework",
-                "michel-pi",
-                "wrapper"
-            ],
-            "support": {
-                "issues": "https://github.com/Fortnite-API/php-wrapper/issues",
-                "source": "https://github.com/Fortnite-API/php-wrapper/tree/v1.0.0"
-            },
-            "time": "2019-12-18T08:36:10+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1051,6 +992,48 @@
                 }
             ],
             "time": "2020-11-27T00:39:34+00:00"
+        },
+        {
+            "name": "tustin/fortnite-php",
+            "version": "0.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Tustin/fortnite-php.git",
+                "reference": "58a1f7c94eb3c41c8bbb4b07abc4d744bbb5dce8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Tustin/fortnite-php/zipball/58a1f7c94eb3c41c8bbb4b07abc4d744bbb5dce8",
+                "reference": "58a1f7c94eb3c41c8bbb4b07abc4d744bbb5dce8",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3",
+                "php": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHP wrapper for the official Fortnite API.",
+            "homepage": "https://github.com/Tustin/fortnite-php",
+            "keywords": [
+                "Fortnite",
+                "api",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/Tustin/fortnite-php/issues",
+                "source": "https://github.com/Tustin/fortnite-php/tree/master"
+            },
+            "abandoned": true,
+            "time": "2018-12-12T01:03:54+00:00"
         }
     ],
     "packages-dev": [],

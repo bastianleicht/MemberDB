@@ -18,7 +18,7 @@
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/fortnite-api/php-wrapper" />
+      <path value="$PROJECT_DIR$/vendor/tustin/fortnite-php" />
     </include_path>
   </component>
 </project>

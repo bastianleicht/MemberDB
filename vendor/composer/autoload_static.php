@@ -45,10 +45,6 @@ class ComposerStaticInit8337845331d2aac5bafc4f18ec00f608
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
         ),
-        'F' => 
-        array (
-            'FortniteApi\\' => 12,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -104,15 +100,34 @@ class ComposerStaticInit8337845331d2aac5bafc4f18ec00f608
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
-        'FortniteApi\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/fortnite-api/php-wrapper/src',
-        ),
     );
 
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Fortnite\\Account' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Account.php',
+        'Fortnite\\Auth' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Auth.php',
+        'Fortnite\\Challenges' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Challenges.php',
+        'Fortnite\\Exception\\InvalidGameModeException' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Exception/InvalidGameModeException.php',
+        'Fortnite\\Exception\\InvalidStatException' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Exception/InvalidStatException.php',
+        'Fortnite\\Exception\\LeaderboardNotFoundException' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Exception/LeaderboardNotFoundException.php',
+        'Fortnite\\Exception\\StatsNotFoundException' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Exception/StatsNotFoundException.php',
+        'Fortnite\\Exception\\TwoFactorAuthRequiredException' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Exception/TwoFactorAuthRequiredException.php',
+        'Fortnite\\Exception\\UserNotFoundException' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Exception/UserNotFoundException.php',
+        'Fortnite\\FortniteClient' => __DIR__ . '/..' . '/tustin/fortnite-php/src/FortniteClient.php',
+        'Fortnite\\Language' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Language.php',
+        'Fortnite\\Leaderboard' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Leaderboard.php',
+        'Fortnite\\Mode' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Mode.php',
+        'Fortnite\\Model\\FortniteLeaderboard' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Model/FortniteLeaderboard.php',
+        'Fortnite\\Model\\FortniteNews' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Model/FortniteNews.php',
+        'Fortnite\\Model\\FortniteStats' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Model/FortniteStats.php',
+        'Fortnite\\Model\\Items' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Model/Items.php',
+        'Fortnite\\News' => __DIR__ . '/..' . '/tustin/fortnite-php/src/News.php',
+        'Fortnite\\Platform' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Platform.php',
+        'Fortnite\\Profile' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Profile.php',
+        'Fortnite\\Stats' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Stats.php',
+        'Fortnite\\Status' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Status.php',
+        'Fortnite\\Store' => __DIR__ . '/..' . '/tustin/fortnite-php/src/Store.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
