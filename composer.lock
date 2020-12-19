@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c8690482b4fc700cb63524170b250b0e",
+    "content-hash": "329a8084cf7a48d49cc037b5e2cf3a76",
     "packages": [
         {
             "name": "filp/whoops",
@@ -70,6 +70,65 @@
                 "source": "https://github.com/filp/whoops/tree/2.9.1"
             },
             "time": "2020-11-01T12:00:00+00:00"
+        },
+        {
+            "name": "fortnite-api/php-wrapper",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Fortnite-API/php-wrapper.git",
+                "reference": "ba932dbca418b78cbbb04e6ef583d7ee94515dd5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Fortnite-API/php-wrapper/zipball/ba932dbca418b78cbbb04e6ef583d7ee94515dd5",
+                "reference": "ba932dbca418b78cbbb04e6ef583d7ee94515dd5",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.4",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FortniteApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "michel-pi",
+                    "email": "mail@michel-pi.de",
+                    "homepage": "https://github.com/Fortnite-API/php-wrapper",
+                    "role": "maintainer"
+                },
+                {
+                    "name": "NotOfficer",
+                    "email": "contact@fortnite-api.com",
+                    "homepage": "https://github.com/Fortnite-API/php-wrapper",
+                    "role": "owner"
+                }
+            ],
+            "description": "PHP wrapper for https://fortnite-api.com",
+            "keywords": [
+                "Fortnite",
+                "api",
+                "client",
+                "fortnite-api",
+                "fortnite-api.com",
+                "framework",
+                "michel-pi",
+                "wrapper"
+            ],
+            "support": {
+                "issues": "https://github.com/Fortnite-API/php-wrapper/issues",
+                "source": "https://github.com/Fortnite-API/php-wrapper/tree/v1.0.0"
+            },
+            "time": "2019-12-18T08:36:10+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

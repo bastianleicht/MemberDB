@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '91ec33ac5bcd50d4048cfa1e4df6a7efe82442bf',
+    'reference' => '18c51ed5e3324fd9b27a4649b0b21d13417f9d8b',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '91ec33ac5bcd50d4048cfa1e4df6a7efe82442bf',
+      'reference' => '18c51ed5e3324fd9b27a4649b0b21d13417f9d8b',
     ),
     'filp/whoops' => 
     array (
@@ -28,6 +28,15 @@
       array (
       ),
       'reference' => '307fb34a5ab697461ec4c9db865b20ff2fd40771',
+    ),
+    'fortnite-api/php-wrapper' => 
+    array (
+      'pretty_version' => 'v1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ba932dbca418b78cbbb04e6ef583d7ee94515dd5',
     ),
     'guzzlehttp/guzzle' => 
     array (

@@ -69,6 +69,68 @@
             "install-path": "../filp/whoops"
         },
         {
+            "name": "fortnite-api/php-wrapper",
+            "version": "v1.0.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Fortnite-API/php-wrapper.git",
+                "reference": "ba932dbca418b78cbbb04e6ef583d7ee94515dd5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Fortnite-API/php-wrapper/zipball/ba932dbca418b78cbbb04e6ef583d7ee94515dd5",
+                "reference": "ba932dbca418b78cbbb04e6ef583d7ee94515dd5",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.4",
+                "php": ">=7.0"
+            },
+            "time": "2019-12-18T08:36:10+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "FortniteApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "michel-pi",
+                    "email": "mail@michel-pi.de",
+                    "homepage": "https://github.com/Fortnite-API/php-wrapper",
+                    "role": "maintainer"
+                },
+                {
+                    "name": "NotOfficer",
+                    "email": "contact@fortnite-api.com",
+                    "homepage": "https://github.com/Fortnite-API/php-wrapper",
+                    "role": "owner"
+                }
+            ],
+            "description": "PHP wrapper for https://fortnite-api.com",
+            "keywords": [
+                "Fortnite",
+                "api",
+                "client",
+                "fortnite-api",
+                "fortnite-api.com",
+                "framework",
+                "michel-pi",
+                "wrapper"
+            ],
+            "support": {
+                "issues": "https://github.com/Fortnite-API/php-wrapper/issues",
+                "source": "https://github.com/Fortnite-API/php-wrapper/tree/v1.0.0"
+            },
+            "install-path": "../fortnite-api/php-wrapper"
+        },
+        {
             "name": "guzzlehttp/guzzle",
             "version": "6.5.5",
             "version_normalized": "6.5.5.0",
