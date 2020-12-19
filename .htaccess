@@ -17,6 +17,7 @@
 
     #member
     RewriteRule ^member/([A-Za-z0-9-]+)?$ index.php?page=member&id=$1 [NC,L]
+    RewriteRule ^stats/([A-Za-z0-9-]+)?$ index.php?page=stats&id=$1 [NC,L]
 
     #rechtliches
     RewriteRule ^impressum?$ index.php?page=impressum [L]

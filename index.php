@@ -50,6 +50,7 @@ if(isset($_GET['page'])) {
 
         //member
         case "member": include($customer."member.php");  break;
+        case "stats": include($customer."stats.php");  break;
 
         //rechtliches
         case "impressum": include($sites."impressum.php");  break;
