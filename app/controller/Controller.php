@@ -29,6 +29,13 @@ abstract class Controller
         return $cdnUrl;
     }
 
+    public function picUrl()
+    {
+        include 'config.php';
+
+        return $picUrl;
+    }
+
     public function siteName()
     {
         #include 'config.php';
