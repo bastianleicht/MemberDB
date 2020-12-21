@@ -4,6 +4,15 @@ include 'app/controller/PageController.php';
 
 $id = $helper->protect($_GET['id']);
 
+$SQL = $db->prepare("SELECT * FROM `member_teams` WHERE `id` = :id");
+$SQL->execute(array(":id" => $id));
+$team_data = $SQL->fetch(PDO::FETCH_ASSOC);
+
+if(!($team_data > 0)) {
+    die(header('Location: '.$helper->url()));
+}
+
+
 if (isset($_POST['updateTeam'])) {
     $SQL = $db->prepare("UPDATE `member_teams` SET `name`=? ,`state`=? WHERE `id` = ?");
     $SQL->execute(array($_POST['name'], $_POST['state'], $id));
@@ -22,10 +31,6 @@ if (isset($_POST['deleteTeam'])) {
     echo sendSuccess('Team wurde erfolgreich gelöscht!');
     header('refresh:3;url=' . $helper->url() . 'team/teams');
 }
-
-$SQL = $db->prepare("SELECT * FROM `member_teams` WHERE `id` = :id");
-$SQL->execute(array(":id" => $id));
-$team_data = $SQL->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
