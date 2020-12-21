@@ -247,19 +247,19 @@ if (isset($_POST['deleteMember'])) {
                             <ul class="nav nav-tabs" role="tablist">
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home-1" role="tab" aria-controls="home-1" aria-selected="true">
+                                    <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true">
                                         <i class="mdi mdi-account-outline"></i>
                                         Info
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile-1" role="tab" aria-controls="profile-1" aria-selected="false">
+                                    <a class="nav-link" id="stats-tab" data-toggle="tab" href="#stats" role="tab" aria-controls="stats" aria-selected="false">
                                         <i class="mdi mdi-chart-bar"></i>
                                         Stats
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact-1" role="tab" aria-controls="contact-1" aria-selected="false">
+                                    <a class="nav-link" id="socials-tab" data-toggle="tab" href="#socials" role="tab" aria-controls="socials" aria-selected="false">
                                         <i class="mdi mdi-newspaper"></i>
                                         Socials
                                     </a>
@@ -267,7 +267,7 @@ if (isset($_POST['deleteMember'])) {
                             </ul>
 
                             <div class="tab-content">
-                                <div class="tab-pane fade show active" id="home-1" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
                                     <div class="form-group row">
                                         <label class="col-sm-3 col-form-label">Reallife Name:</label>
                                         <div class="col-sm-9">
@@ -331,13 +331,13 @@ if (isset($_POST['deleteMember'])) {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="profile-1" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="tab-pane fade" id="stats" role="tabpanel" aria-labelledby="stats-tab">
                                     <h4 class="mt-0">Soon</h4>
                                     <p>
                                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
                                     </p>
                                 </div>
-                                <div class="tab-pane fade" id="contact-1" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="tab-pane fade" id="socials" role="tabpanel" aria-labelledby="socials-tab">
                                     <h4 class="mt-0">Soon</h4>
                                     <p>
                                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
