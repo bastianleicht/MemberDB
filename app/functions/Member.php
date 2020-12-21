@@ -22,6 +22,15 @@ class Member extends Controller
         return $response['id'];
     }
 
+    public function getTeambyID($id)
+    {
+        $SQL = self::db()->prepare("SELECT * FROM `member_teams` WHERE `id` = :id");
+        $SQL->execute(array(":id" => $id));
+        $response = $SQL->fetch(PDO::FETCH_ASSOC);
+
+        return $response['name'];
+    }
+
     public function create($userid, $username, $rlname, $fnname, $alter, $trackerlink, $team, $socials, $eigenschaften, $zukunft, $cws, $bemerkungen)
     {
         $SQL = self::db()->prepare("INSERT INTO `member` (`user_id`, `username` ,`rlname`,`fnname`,`member_alter`,`tracker`,`team_id`,`socials`, `eigenschaften`, `zukunft`, `cws`, `bemerkungen`)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
