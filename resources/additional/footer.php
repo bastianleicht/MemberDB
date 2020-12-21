@@ -21,11 +21,15 @@
 <!-- endinject -->
 <!-- plugin js for this page -->
 <script src="<?= $helper->cdnUrl() ?>vendors/chart.js/Chart.min.js"></script>
+<script src="<?= $helper->cdnUrl() ?>vendors/jquery-steps/jquery.steps.min.js"></script>
+<script src="<?= $helper->cdnUrl() ?>vendors/jquery-validation/jquery.validate.min.js"></script>
 <!-- End plugin js for this page -->
 <!-- Custom js for this page-->
 <script src="<?= $helper->cdnUrl() ?>js/dashboard.js"></script>
 <script src="<?= $helper->cdnUrl() ?>js/todolist.js"></script>
+<script src="<?= $helper->cdnUrl() ?>js/wizard.js"></script>
 <!-- End custom js for this page-->
+<script src="https://kit.fontawesome.com/e924d8dfd3.js"></script>
 </body>
 
 </html>
