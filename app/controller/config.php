@@ -1,5 +1,5 @@
 <?php
-$dev = true;
+$dev = false;
 $DEBUG = false;
 
 $db_host = 'localhost';
