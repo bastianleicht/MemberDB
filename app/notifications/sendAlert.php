@@ -1,7 +1,8 @@
 <?php
-
 /*
- * Sweetalert 2
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
  */
 
 function sendError($message, $title = 'Fehler'){

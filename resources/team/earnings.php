@@ -1,4 +1,10 @@
 <?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
+
 $currPage = 'back_Team Earnings_team_admin';
 include 'app/controller/PageController.php';
 
@@ -101,7 +107,7 @@ if(isset($_POST['addEarnings'])){
 
     if (empty($error)) {
 
-        $earnings->create($$member->getIDbyUName($_POST['member']), $_POST['gateway'], $_POST['state'], $_POST['amount'], $_POST['description']);
+        $earnings->create($member->getIDbyUName($_POST['member']), $_POST['gateway'], $_POST['state'], $_POST['amount'], $_POST['description']);
 
         echo sendSuccess('Earning wurde erstellt');
     } else {
@@ -157,7 +163,7 @@ if(isset($_POST['addEarnings'])){
                     <input name="amount" placeholder="10€" class="form-control" required>
 
                     <br>
-                    <label>Benerkungen:</label>
+                    <label>Bemerkungen:</label>
                     <textarea class="form-control" rows="5" name="description" placeholder="-" required></textarea>
 
                 </div>

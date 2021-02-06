@@ -1,4 +1,10 @@
 <?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
+
 if($user->isInTeam($_COOKIE['old_session_token'])){
     $SQL = $db->prepare("SELECT * FROM `users` WHERE `session_token` = :session_token");
     $SQL->execute(array(":session_token" => $_COOKIE['session_token']));

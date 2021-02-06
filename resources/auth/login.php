@@ -1,4 +1,10 @@
 <?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
+
 $currPage = 'auth_Login';
 include 'app/controller/PageController.php';
 include 'app/manager/customer/auth/login.php';

@@ -1,4 +1,9 @@
 <?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
 
 if (!function_exists('dd')) {
     function dd()

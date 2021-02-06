@@ -1,16 +1,14 @@
 <?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
+
 $currPage = 'back_Benutzerverwaltung_team_admin';
 include 'app/controller/PageController.php';
 
 $id = $helper->protect($_GET['id']);
-
-$SQL = $db->prepare("SELECT * FROM `users` WHERE `id` = :id");
-$SQL->execute(array(":id" => $id));
-$userData = $SQL->fetch(PDO::FETCH_ASSOC);
-
-if(!($userData > 0)) {
-    die(header('Location: '.$helper->url()));
-}
 
 if(isset($_POST['updateUser'])){
     $SQL = $db->prepare("UPDATE `users` SET `state`=? ,`role`=?,`username`=?,`email`=?,`member_limit`=? WHERE `id` = ?");
@@ -19,6 +17,10 @@ if(isset($_POST['updateUser'])){
     echo sendSuccess('Der Benutzer wurde bearbeitet');
     header('refresh:3;url=' . $helper->url() . 'team/users');
 }
+
+$SQL = $db->prepare("SELECT * FROM `users` WHERE `id` = :id");
+$SQL->execute(array(":id" => $id));
+$userData = $SQL->fetch(PDO::FETCH_ASSOC);
 
 if(isset($_POST['login'])){
     setcookie('old_session_token', $_COOKIE['session_token'], time()+864000,'/');

@@ -1,39 +1,12 @@
 <?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
+
 $currPage = 'back_Team Memberverwaltung_team_admin';
 include 'app/controller/PageController.php';
-
-// $productResult = $SQL = $db->prepare("SELECT * FROM `member`");
-
-if (isset($_POST["exportcsv"])) {
-    echo sendInfo('Derzeit nicht verfügbar!');
-
-
-
-    // $filename = "Member-Export.csv";
-    // header('Content-Type: text/csv; charset=utf-8');
-    // header('Content-Disposition: attachment; filename="data.csv"');
-
-    // $output = fopen("php://output", "w");
-    // fputcsv($output, array('ID', 'Creator', 'Username', 'Reallife Name', 'Fortnite Name', 'Alter', 'Tracker', 'Team', 'Socials', 'Eigenschaften', 'Zukunftspläne', 'CWS'));
-    // $queryResult = $SQL = $db->prepare("SELECT * FROM `member` ORDER BY ID DESC");
-    // while($row = mysqli_fetch_assoc($queryResult))
-    // {
-    //     fputcsv($output, $row);
-    // }
-    // fclose($output);
-
-    // $isPrintHeader = false;
-    // if (!empty($productResult)) {
-    //     foreach ($productResult as $row) {
-    //         if (!$isPrintHeader) {
-    //             echo implode("\t", array_keys($row)) . "\n";
-    //             $isPrintHeader = true;
-    //         }
-    //         echo implode("\t", array_values($row)) . "\n";
-    //     }
-    // }
-    // exit();
-}
 
 ?>
 <div class="content-wrapper">
@@ -45,11 +18,6 @@ if (isset($_POST["exportcsv"])) {
                         <li class="breadcrumb-item"><a href="<?= $helper->url(); ?>"><?= $helper->siteName(); ?></a></li>
                         <li class="breadcrumb-item active"><?= $currPageName; ?></li>
                     </ol>
-                </div>
-                <div class="col-sm-6">
-                    <form method="post">
-                        <button type="submit" name="exportcsv" id="exportcsv" class="btn btn-primary float-sm-right">Export to CSV</button>
-                    </form>
                 </div>
             </div>
         </div>

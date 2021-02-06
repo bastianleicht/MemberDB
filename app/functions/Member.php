@@ -1,4 +1,9 @@
 <?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
 
 $member = new Member();
 
@@ -20,15 +25,6 @@ class Member extends Controller
         $response = $SQL->fetch(PDO::FETCH_ASSOC);
 
         return $response['id'];
-    }
-
-    public function getTeambyID($id)
-    {
-        $SQL = self::db()->prepare("SELECT * FROM `member_teams` WHERE `id` = :id");
-        $SQL->execute(array(":id" => $id));
-        $response = $SQL->fetch(PDO::FETCH_ASSOC);
-
-        return $response['name'];
     }
 
     public function create($userid, $username, $rlname, $fnname, $alter, $trackerlink, $team, $socials, $eigenschaften, $zukunft, $cws, $bemerkungen)

@@ -1,4 +1,10 @@
 <?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
+
 if(isset($_POST['login'])){
     $error = null;
 
@@ -27,24 +33,13 @@ if(isset($_POST['login'])){
     }
 
     if(empty($error)){
-        include_once 'app/controller/config.php';
-        if($dev = true){
-            $SQL = $db->prepare("UPDATE `users` SET `user_addr` = :user_addr WHERE `email` = :email");
-            $SQL->execute(array(":user_addr" => '127.0.0.1', ":email" => $_POST['email']));
+        $SQL = $db->prepare("UPDATE `users` SET `user_addr` = :user_addr WHERE `email` = :email");
+        $SQL->execute(array(":user_addr" => $user->getIP(), ":email" => $_POST['email']));
 
-            $userid = $user->getDataByEmail($_POST['email'],'id');
+        $userid = $user->getDataByEmail($_POST['email'],'id');
 
-            $SQL = $db->prepare("INSERT INTO `login_logs`(`user_id`, `ip_addr`) VALUES (?,?)");
-            $SQL->execute(array($userid, '127.0.0.1'));
-        } else {
-            $SQL = $db->prepare("UPDATE `users` SET `user_addr` = :user_addr WHERE `email` = :email");
-            $SQL->execute(array(":user_addr" => $user->getIP(), ":email" => $_POST['email']));
-
-            $userid = $user->getDataByEmail($_POST['email'],'id');
-
-            $SQL = $db->prepare("INSERT INTO `login_logs`(`user_id`, `ip_addr`) VALUES (?,?)");
-            $SQL->execute(array($userid, $user->getIP()));
-        }
+        $SQL = $db->prepare("INSERT INTO `login_logs`(`user_id`, `ip_addr`) VALUES (?,?)");
+        $SQL->execute(array($userid, $user->getIP()));
 
 
         $sessionId = $user->generateSessionToken($_POST['email'], $helper->generateRandomString(30));

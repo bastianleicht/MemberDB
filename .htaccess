@@ -1,5 +1,4 @@
 <IfModule mod_rewrite.c>
-
     RewriteEngine on
     RewriteBase /
 
@@ -40,7 +39,3 @@
     RewriteRule ^DEBUG?$ index.php?page=DEBUG [L]
 
 </IfModule>
-<Files 403.shtml>
-    order allow,deny
-    allow from all
-</Files>

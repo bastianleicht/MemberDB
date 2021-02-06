@@ -1,7 +1,13 @@
 <?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
+
 $mailContent = '<div style="padding: 60px 70px; border-top: 1px solid rgba(0,0,0,0.05);">
             <h1 style="margin-top: 0px;">
-               Hallo '.$user_name.',
+               Hallo '.$username.',
             </h1>
             <div style="color: #636363; font-size: 14px;">
                <p>

@@ -1,4 +1,9 @@
 <?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
 
 if($user->sessionExists($_COOKIE['session_token'])){
     /*
@@ -18,37 +23,19 @@ if($user->sessionExists($_COOKIE['session_token'])){
         $user_addr = $user->getIP();
     }
     include_once 'app/controller/config.php';
-    if($dev = true){
-        if('127.0.0.1' != $user_addr){
-            if(isset($_COOKIE['old_session_token'])){
-                if($user->isInTeam($_COOKIE['old_session_token'])){
+    if($user->getIP() != $user_addr){
+        if(isset($_COOKIE['old_session_token'])){
+            if($user->isInTeam($_COOKIE['old_session_token'])){
 
-                } else {
-                    $_SESSION['info_msg'] = 'Session Expired';
-                    setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
-                    die();
-                }
             } else {
                 $_SESSION['info_msg'] = 'Session Expired';
                 setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
                 die();
             }
-        }
-    } else {
-        if($user->getIP() != $user_addr){
-            if(isset($_COOKIE['old_session_token'])){
-                if($user->isInTeam($_COOKIE['old_session_token'])){
-
-                } else {
-                    $_SESSION['info_msg'] = 'Session Expired';
-                    setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
-                    die();
-                }
-            } else {
-                $_SESSION['info_msg'] = 'Session Expired weirdly';
-                setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
-                die();
-            }
+        } else {
+            $_SESSION['info_msg'] = 'Session Expired weirdly';
+            setcookie('session_token', null, time(), '/'); header('Location: '.$helper->url().'login');
+            die();
         }
     }
 

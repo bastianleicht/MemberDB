@@ -1,3 +1,10 @@
+<?php
+/*
+ *   Copyright (c) 2021 Bastian Leicht
+ *   All rights reserved.
+ *   https://github.com/routerabfrage/License
+ */
+?>
 <nav class="navbar top-navbar col-lg-12 col-12 p-0">
     <div class="container">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
@@ -8,8 +15,7 @@
 
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item nav-profile dropdown">
-                    <span class="nav-profile-name text-center" style="width: 70px;"><?= $user->getDataById($userid, 'username')?></span>
-                    <a class="nav-link" href="#" data-toggle="dropdown" id="profileDropdown">
+                    <a class="nav-link" href="javascript:void();" data-toggle="dropdown" id="profileDropdown">
                         <img src="https://via.placeholder.com/30x30" alt="profile" />
                     </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
@@ -49,7 +55,7 @@
 
             <?php if ($user->isAdmin($_COOKIE['session_token'])) { ?>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="javascript:void();" class="nav-link">
                         <i class="mdi mdi-settings menu-icon"></i>
                         <span class="menu-title">Administration</span>
                         <i class="menu-arrow"></i>
