@@ -7,7 +7,7 @@
 ?>
 <footer class="footer">
     <div class="w-100 clearfix">
-        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2021 <a href="https://bastinaleicht.com" target="_blank">Bastian Leicht</a>. All rights reserved. Made with <i class="mdi mdi-heart-outline text-danger"></i>.</span>
+        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2021 <a href="https://bastianleicht.com" target="_blank">Bastian Leicht</a>. All rights reserved. Made with <i class="mdi mdi-heart-outline text-danger"></i>.</span>
         <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"><a href="<?= $helper->url()?>impressum">Impressum</a> | <a href="<?= $helper->url()?>datenschutz">Datenschutz</a> | <a href="<?= $helper->url()?>agb">AGB</a></span>
     </div>
 </footer>

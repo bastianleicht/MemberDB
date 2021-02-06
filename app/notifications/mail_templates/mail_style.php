@@ -5,9 +5,10 @@
  *   https://github.com/routerabfrage/License
  */
 
+
 $name = 'SiteName';
 $siteDomain = 'SiteName.de';
-$url = 'https://kd1126-1.sylvan.ooo/';
+$url = 'https://localhost/';
 $cdnUrl = $url.'assets/style/';
 $picUrl = $url.'assets/images/';
 

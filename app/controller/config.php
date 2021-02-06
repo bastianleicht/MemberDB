@@ -5,17 +5,16 @@
  *   https://github.com/routerabfrage/License
  */
 
-$dev = false;
 $DEBUG = false;
 
 $db_host = 'localhost';
 $db_name = 'memberdb';
-$db_username = 'memberdb';
-$db_password = 'yq9Kt0$9';
+$db_username = 'root';
+$db_password = '';
 
 $grecaptchaSiteKey = '';
 $grecaptchaSecret = '';
 
-$url = 'https://memberdb.bastianleicht.de/';
+$url = 'http://localhost/';
 $cdnUrl = $url.'assets/style/';
 $picUrl = $url.'assets/images/';
